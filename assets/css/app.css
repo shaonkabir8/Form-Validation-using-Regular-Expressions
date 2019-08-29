@@ -1,0 +1,250 @@
+:root{
+  --main: #10d53d;
+}
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  cursor: pointer;
+}
+
+input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input:focus {
+  box-shadow: 0 0 10px #332828;
+  transition: all .2s linear;
+}
+input:focus::placeholder {
+	font-size: 18px;
+  opacity: .5;
+  transition: all .2s linear;
+}
+.page_login input:focus {
+	box-shadow: 0 0 10px #737070;
+}
+input {
+  transition: all .2s linear;
+}
+body {
+  font-family: "Karla", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+button,
+input {
+  font-family: "Karla", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: white;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  padding: 36px 15px 10px;
+  background: url(../img/bg-sign-up.jpg) no-repeat 50% 50%/cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: white;
+}
+
+.page_login {
+  background-image: url(../img/bg-sign-in.jpg);
+}
+
+
+.page_login a:hover {
+  color:var(--main)
+}
+
+
+.form__container {
+  padding: 52px 36px 38px;
+  text-align: center;
+}
+
+.form__footer {
+  padding: 19px 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 18px;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 32px;
+}
+
+.fieldset {
+  margin-bottom: 48px;
+}
+
+.input {
+	width: 100%;
+	height: 64px;
+	background: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	margin: 5px 0;
+	border-radius: 5px;
+}
+.input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+.input::-webkit-input-placeholder {
+  opacity: .7;
+  color: white;
+}
+
+.input::-ms-input-placeholder {
+  opacity: .7;
+  color: white;
+}
+
+.input::placeholder {
+  opacity: .7;
+  color: white;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: white;
+    background: transparent;
+  }
+}
+
+@keyframes autofill {
+  to {
+    color: white;
+    background: transparent;
+  }
+}
+
+.btn {
+  min-width: 234px;
+  height: 50px;
+  background: white;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #005450;
+  letter-spacing: -0.3px;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.btn:hover {
+  opacity: .7;
+}
+
+.text {
+  margin-top: 24px;
+  opacity: .7;
+  font-size: 16px;
+  line-height: 1.375;
+}
+
+.about {
+  margin-top: 8px;
+  padding: 0 15px;
+  text-align: right;
+}
+
+.about a {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 767px) {
+  .page {
+    padding: 64px 10px 10px;
+  }
+  .form__container {
+    padding: 52px 24px 38px;
+  }
+  .about {
+    margin-top: 32px;
+    text-align: center;
+  }
+}
+
+.output,
+.logInOutput {
+	background: var(--main);
+	color: #fff;
+	width: 100%;
+	font-size: 19px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-variant: small-caps;
+	font-style: italic;
+	box-shadow: 0 0 13px #000;
+
+}
+
+.err {
+	background: red;
+	width: 100%;
+	padding: 10px;
+	margin: 15px 0;
+}
+
+
+.form {
+  width: 100%;
+  max-width: 432px;
+  margin: auto;
+
+  -webkit-box-shadow: 0 16px 22px -10px rgba(0, 0, 0, 0.1), 0 34px 55px 4px rgba(0, 0, 0, 0.05), 0 13px 66px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 16px 22px -10px rgba(0, 0, 0, 0.1), 0 34px 55px 4px rgba(0, 0, 0, 0.05), 0 13px 66px 12px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+
+  position: relative;
+  z-index: 1;
+}
+.form::after {
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #005450;
+	z-index: -1;
+	opacity: 0.8;
+}
+
+.page_login .form::after {
+  background: black;
+  opacity: .9;
+}
